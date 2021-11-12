@@ -1,2 +1,2 @@
-# friendbot-system
+# Friendbot System
 System for managing FriendBot publications.
