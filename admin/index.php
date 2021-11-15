@@ -42,8 +42,8 @@
                     <td class='table__column'>$title</td>
                     <td class='table__column'>$category</td>
                     <td class='table__column'>$date</td>
-                    <td class='table__column'><a class='button button--black' href='save.php?id=$id' target='_self'>Editar</a></td>
-                    <td class='table__column'><a class='button' href='delete.php?id=$id' target='_self'>Deletar</a></td>
+                    <td class='table__column'><a class='button button--black' href='./save.php?id=$id' target='_self'>Editar</a></td>
+                    <td class='table__column'><a class='button' href='./delete.php?id=$id' target='_self'>Deletar</a></td>
                 </tr>";
             }
 

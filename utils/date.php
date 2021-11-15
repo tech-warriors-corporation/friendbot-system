@@ -2,7 +2,7 @@
     function get_format($with_hour = false){
         $format = 'd/m/Y';
 
-        return $with_hour ? "$format (h:i)" : $format;
+        return $with_hour ? "$format (H:i)" : $format;
     }
 
     function set_time_zone_br(){

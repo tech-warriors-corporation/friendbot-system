@@ -17,7 +17,7 @@
     $message = null;
 
     if($has_id && $submitted){
-        $statement = $connection -> prepare("UPDATE $table set title='$title', description=$description, image_url='$image_url', date='$date', category='$category' WHERE id=$id");
+        $statement = $connection -> prepare("UPDATE $table set title='$title', description='$description', image_url='$image_url', date='$date', category='$category' WHERE id=$id");
 
         try{
             $statement -> execute();
@@ -27,7 +27,7 @@
             show_error($error);
         }
     } else if($has_id){
-        $statement = $connection -> prepare("SELECT id, title, description, image_url, date, category FROM $table WHERE id=$id");
+        $statement = $connection -> prepare("SELECT title, description, image_url, date, category FROM $table WHERE id=$id");
 
         try{
             $statement -> execute();
