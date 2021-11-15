@@ -1,6 +1,6 @@
 <?php
     function getFormat($withHour = false){
-        $format = 'm/d/Y';
+        $format = 'd/m/Y';
 
         return $withHour ? "$format (h:i)" : $format;
     }
