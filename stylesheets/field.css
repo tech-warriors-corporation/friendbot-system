@@ -19,6 +19,8 @@
     transition: box-shadow var(--time);
     border-color: var(--grey);
     font-size: .9rem;
+    background-color: var(--white);
+    resize: none;
 }
 
 .field .field__input:focus{

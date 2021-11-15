@@ -1,0 +1,20 @@
+.form{
+    width: 100%;
+}
+
+.form .form__fieldset{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space);
+}
+
+.form .form__subtitle{
+    margin-bottom: var(--space);
+    display: block;
+}
+
+.form .form__actions{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: var(--space);
+}

@@ -30,7 +30,7 @@
                     <?php
                         require_once("$prefix_folder/utils/date.php");
 
-                        sayNow();
+                        say_now();
                     ?>
                 </span>
             </div>

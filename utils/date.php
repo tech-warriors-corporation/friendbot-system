@@ -1,27 +1,27 @@
 <?php
-    function getFormat($withHour = false){
+    function get_format($with_hour = false){
         $format = 'd/m/Y';
 
-        return $withHour ? "$format (h:i)" : $format;
+        return $with_hour ? "$format (h:i)" : $format;
     }
 
-    function setTimeZoneBR(){
+    function set_time_zone_br(){
         setlocale(LC_ALL, 'pt_BR.utf8');
         date_default_timezone_set('America/Sao_Paulo');
     }
 
-    function sayNow(){
-        setTimeZoneBR();
+    function say_now(){
+        set_time_zone_br();
 
-        $format = getFormat(true);
+        $format = get_format(true);
 
         echo date($format);
     }
 
-    function formatString($value){
-        setTimeZoneBR();
+    function format_string($value){
+        set_time_zone_br();
 
-        $format = getFormat();
+        $format = get_format();
 
         return date_format(date_create($value), $format);
     }

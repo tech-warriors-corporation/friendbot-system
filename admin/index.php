@@ -13,7 +13,7 @@
 
         $results = $statement -> fetchAll(PDO::FETCH_ASSOC);
     } catch(Exception $error){
-        showError($error);
+        show_error($error);
     }
 ?>
 
