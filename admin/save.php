@@ -72,8 +72,8 @@
             <label class="field__label" for="categories">Categorias</label>
             <select name="category" required id="categories" class="field__input">
                 <?php 
-                    foreach($categories as $key => $categorySelect){
-                        echo ($key === 0 && !$has_id) || $categorySelect === $category ? "<option selected value='$categorySelect'>$categorySelect</option>" : "<option value='$categorySelect'>$categorySelect</option>";
+                    foreach($categories as $key => $category_select){
+                        echo ($key === 0 && !$has_id) || $category_select === $category ? "<option selected value='$category_select'>$category_select</option>" : "<option value='$category_select'>$category_select</option>";
                     }
                 ?>
             </select>

@@ -16,3 +16,34 @@
     align-items: center;
     column-gap: var(--half-space);
 }
+
+.table .table__list{
+    width: 100%;
+    border-spacing: 0 var(--half-space);
+    border-collapse: separate;
+}
+
+.table .table__column{
+    padding: var(--half-space);
+    border: var(--border);
+    margin: 0;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.table .table__column.table__column--head{
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.table .table__column:not(:last-child){
+    border-right: 0;
+}
+
+.table .table__column:first-child{
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.table .table__column:last-child{
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
