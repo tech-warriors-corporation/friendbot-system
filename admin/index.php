@@ -6,7 +6,7 @@
     require_once("../utils/validations.php");
 
     $results = [];
-    $statement = $connection -> prepare("SELECT id, title, date, category FROM $table");
+    $statement = $connection -> prepare("SELECT id, title, date, category FROM $table ORDER BY id DESC");
 
     try{
         $statement -> execute();
