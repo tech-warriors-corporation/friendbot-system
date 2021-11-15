@@ -18,6 +18,14 @@
 ?>
 
 <div class="table">
+    <div class="table__head">
+        <h2 class="subtitle">Administração das publicações</h2>
+        <div class="table__actions">
+            <a class="button button--black" target="_self" href="../index.php">Voltar</a>
+            <a class="button button--black" target="_self" href="./save.php">Criar</a>
+        </div>
+    </div>
+
     <?php
         if(!$results) echo "<div class='not-found'>Nenhuma publicação encontrada, crie uma acima</div>";
         else {

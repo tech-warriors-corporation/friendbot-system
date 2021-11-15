@@ -1,0 +1,18 @@
+.table{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space);
+}
+
+.table .table__head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: var(--space);
+}
+
+.table .table__actions{
+    display: flex;
+    align-items: center;
+    column-gap: var(--half-space);
+}

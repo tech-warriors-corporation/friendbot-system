@@ -13,6 +13,7 @@
     text-align: center;
     line-height: 1;
     margin: 0;
+    display: block;
 }
 
 .button:hover, .button:focus{

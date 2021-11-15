@@ -36,3 +36,9 @@ input, img{
     font-size: 2rem;
     font-weight: 600;
 }
+
+.subtitle{
+    color: var(--black);
+    font-size: 1.75rem;
+    font-weight: 500;
+}
