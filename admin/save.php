@@ -39,6 +39,8 @@
             $image_url = $result -> image_url;
             $date = $result -> date;
             $category = $result -> category;
+
+            if(!$title) redirect('./index.php', "Id inválido");
         } catch(Exception $error){
             show_error($error);
         }

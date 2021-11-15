@@ -1,5 +1,7 @@
 <?php
     function redirect($path, $message){
-        echo "<script>alert('$message'); document.location = '$path';</script>";
+        $alert = !!$message ? "alert('$message');" : "";
+
+        echo "<script>$alert document.location = '$path';</script>";
     }
 ?>
