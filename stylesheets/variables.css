@@ -1,6 +1,7 @@
 :root{
     --space: 16px;
     --half-space: calc(var(--space) / 2);
+    --double-space: calc(var(--space) * 2);
     --primary: #f00;
     --black: #000;
     --white: #fff;

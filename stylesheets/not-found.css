@@ -1,0 +1,11 @@
+.not-found{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space);
+    border-radius: var(--radius);
+    border: var(--border);
+    font-size: 1.15rem;
+    font-weight: 500;
+}

@@ -68,4 +68,4 @@
             </div>
         </header>
 
-        <main class="content">
+        <main class="content content--main">

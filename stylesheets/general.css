@@ -26,6 +26,11 @@ input, img{
     display: block;
 }
 
+.content.content--main{
+    padding-top: var(--double-space);
+    padding-bottom: var(--double-space);
+}
+
 .title{
     color: var(--white);
     font-size: 2rem;
