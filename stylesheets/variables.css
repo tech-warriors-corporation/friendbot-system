@@ -1,0 +1,12 @@
+:root{
+    --space: 16px;
+    --half-space: calc(var(--space) / 2);
+    --primary: #f00;
+    --black: #000;
+    --white: #fff;
+    --time: .25s;
+    --grey: #9c9c9c;
+    --light-grey: #cecece;
+    --border: 2px solid var(--black);
+    --radius: 4px;
+}

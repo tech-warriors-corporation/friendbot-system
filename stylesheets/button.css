@@ -1,0 +1,28 @@
+.button{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: var(--space);
+    background-color: var(--primary);
+    border-radius: var(--half-space);
+    transition: opacity var(--time);
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+}
+
+.button:hover, .button:focus{
+    opacity: .9;
+}
+
+.button:active{
+    opacity: .8;
+}
+
+.button.button--black{
+    background-color: var(--black);
+}

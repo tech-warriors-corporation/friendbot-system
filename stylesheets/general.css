@@ -1,0 +1,33 @@
+html, body{
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    background-color: var(--white);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+input, img{
+    border-radius: var(--radius);
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    padding: 0 var(--space);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: block;
+}
+
+.title{
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 600;
+}

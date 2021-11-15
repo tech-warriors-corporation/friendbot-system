@@ -1,0 +1,24 @@
+.field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: var(--radius);
+}
+
+.field .field__label{
+    font-weight: 600;
+    color: var(--black);
+}
+
+.field .field__input{
+    padding: var(--half-space);
+    border: var(--border);
+    border-radius: var(--radius);
+    outline: none;
+    transition: box-shadow var(--time);
+    border-color: var(--grey);
+}
+
+.field .field__input:focus{
+    box-shadow: 0 8px 14px -4px var(--grey);
+}
