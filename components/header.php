@@ -44,7 +44,7 @@
                 <div class="header__categories content">
                     <?php 
                         foreach($categories as $category){
-                            echo "<a class='header__category' target='_self' href='$prefix_folder/index.php?categoria=$category'>$category</a>";
+                            echo "<a class='link' target='_self' href='$prefix_folder/index.php?categoria=$category'>$category</a>";
                         }
                     ?>
                 </div>

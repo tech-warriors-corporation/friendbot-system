@@ -17,7 +17,7 @@
     }
 ?>
 
-<div class="table">
+<section class="table">
     <div class="table__head">
         <h2 class="subtitle">Administração das publicações</h2>
         <div class="table__actions">

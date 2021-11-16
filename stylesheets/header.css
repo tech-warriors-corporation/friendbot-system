@@ -61,12 +61,6 @@
     padding-bottom: var(--half-space);
 }
 
-.header .header__category{
-    font-size: 1.15rem;
-    color: var(--white);
-    font-weight: 500;
-}
-
 .header .header__search{
     display: flex;
     align-items: flex-end;

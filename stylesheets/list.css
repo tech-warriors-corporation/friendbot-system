@@ -1,0 +1,34 @@
+.list{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space);
+    height: 100%;
+}
+
+.list .list__container{
+    display: flex;
+    column-gap: var(--space);
+    height: inherit;
+}
+
+.list .list__ad, .list .list__items{
+    height: inherit;
+}
+
+.list .list__items{
+    flex-basis: calc(80% - var(--half-space));
+}
+
+.list .list__ad{
+    flex-basis: calc(20% - var(--half-space));
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    padding: var(--space)
+}
+
+.list .list__ad-image{
+    width: 100%;
+}
