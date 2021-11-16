@@ -1,7 +1,8 @@
 html, body{
-    height: 100%;
     background-color: var(--white);
     font-size: var(--space);
+    height: auto;
+    min-height: 100vh;
 }
 
 *{
@@ -30,6 +31,7 @@ input, img{
 .content.content--main{
     padding-top: var(--double-space);
     padding-bottom: var(--double-space);
+    flex-grow: 1;
 }
 
 .title{
