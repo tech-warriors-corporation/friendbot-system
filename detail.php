@@ -33,4 +33,13 @@
     } else redirect('./index.php', "Sem id");
 ?>
 
+<div class="detail">
+    <div class="square-image square-image--large" aria-label="<?php echo $title ?>" tabindex="0" style="background-image: url(<?php echo $image_url ?>)"></div>
+    <div class="detail__content">
+        <h3 class="subtitle"><?php echo $title ?> (<?php echo $date ?>)</h3>
+        <p class="detail__description"><?php echo $description ?></p>
+        <a href="./index.php" class="link link--red" target="_self">Voltar</a>
+    </div>
+</div>
+
 <?php require_once("./components/footer.php"); ?>

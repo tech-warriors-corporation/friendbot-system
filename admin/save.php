@@ -97,7 +97,7 @@
         </div>
 
         <div class="form__actions">
-            <a class="button button--black" href="./index.php" target="_self">Voltar</a>
+            <a class="link link--black" href="./index.php" target="_self">Voltar</a>
             <input class="button" value="<?php echo $has_id ? 'Salvar' : 'Criar' ?>" name="submit" type="submit">
         </div>
     </fieldset>

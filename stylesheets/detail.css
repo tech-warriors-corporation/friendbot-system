@@ -1,0 +1,14 @@
+.detail{
+    display: flex;
+    column-gap: var(--space);
+}
+
+.detail .detail__content{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space);
+}
+
+.detail .detail__description{
+    flex-grow: 1;
+}

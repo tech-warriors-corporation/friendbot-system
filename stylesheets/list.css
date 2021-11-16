@@ -45,21 +45,6 @@
     column-gap: var(--space)
 }
 
-.list .list__card-image{
-    --size-image: 150px;
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: var(--size-image);
-    height: var(--size-image);
-    min-width: var(--size-image);
-    min-height: var(--size-image);
-    max-width: var(--size-image);
-    max-height: var(--size-image);
-    border-radius: var(--radius);
-}
-
 .list .list__card-content{
     display: flex;
     flex-direction: column;
@@ -77,10 +62,5 @@
 .list .list__card-text{
     font-size: 1rem;
     color: var(--black);
-}
-
-.list .list__card-link{
     flex-grow: 1;
-    display: flex;
-    align-items: flex-end;
 }

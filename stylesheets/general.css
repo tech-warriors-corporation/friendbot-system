@@ -10,6 +10,10 @@ html, body{
     box-sizing: border-box;
 }
 
+p{
+    word-break: break-word;
+}
+
 input, img{
     border-radius: var(--radius);
 }
@@ -44,4 +48,31 @@ input, img{
     color: var(--black);
     font-size: 1.75rem;
     font-weight: 500;
+}
+
+.square-image{
+    --size-image: 150px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: var(--size-image);
+    height: var(--size-image);
+    min-width: var(--size-image);
+    min-height: var(--size-image);
+    max-width: var(--size-image);
+    max-height: var(--size-image);
+    border-radius: var(--radius);
+}
+
+
+.square-image.square-image--large{
+    --size-image-large: 400px;
+
+    width: var(--size-image-large);
+    height: var(--size-image-large);
+    min-width: var(--size-image-large);
+    min-height: var(--size-image-large);
+    max-width: var(--size-image-large);
+    max-height: var(--size-image-large);
 }

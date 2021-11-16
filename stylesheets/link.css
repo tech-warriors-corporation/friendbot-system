@@ -7,3 +7,7 @@
 .link--red{
     color: var(--primary);
 }
+
+.link--black{
+    color: var(--black);
+}

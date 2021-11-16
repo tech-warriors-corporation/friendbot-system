@@ -21,7 +21,7 @@
     <div class="table__head">
         <h2 class="subtitle">Administração das publicações</h2>
         <div class="table__actions">
-            <a class="button button--black" target="_self" href="../index.php">Voltar</a>
+            <a class="link link--black" target="_self" href="../index.php">Voltar</a>
             <a class="button" target="_self" href="./save.php">Criar</a>
         </div>
     </div>

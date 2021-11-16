@@ -33,11 +33,11 @@
                         $id = $item['id'];
 
                         echo "<div class='list__card'>
-                            <div class='list__card-image' style='background-image: url($image_url)'></div>
+                            <div class='square-image' aria-label='$title' tabindex='0' style='background-image: url($image_url)'></div>
                             <div class='list__card-content'>
                                 <h3 class='list__card-title'>$title ($date)</h3>
                                 <p class='list__card-text'>$description</p>
-                                <a href='./detail.php?id=$id' class='list__card-link link link--red' target='_self'>Ler mais</a>
+                                <a href='./detail.php?id=$id' class='link link--red' target='_self'>Ler mais</a>
                             </div>
                         </div>";
                     }
