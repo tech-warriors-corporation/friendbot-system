@@ -57,6 +57,7 @@
     min-height: var(--size-image);
     max-width: var(--size-image);
     max-height: var(--size-image);
+    border-radius: var(--radius);
 }
 
 .list .list__card-content{

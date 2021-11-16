@@ -71,7 +71,7 @@
         </div>
 
         <div class="field">
-            <label class="field__label" for="categories">Categorias</label>
+            <label class="field__label" for="categories">Categoria</label>
             <select name="category" required id="categories" class="field__input">
                 <?php 
                     foreach($categories as $key => $category_select){
