@@ -38,7 +38,7 @@
     <div class="detail__content">
         <h3 class="subtitle"><?php echo $title ?> (<?php echo $date ?>)</h3>
         <p class="detail__description"><?php echo $description ?></p>
-        <a href="./index.php" class="link link--red" target="_self">Voltar</a>
+        <a href="./index.php?categoria=<?php echo $current_category ?>" class="link link--red" target="_self">Voltar</a>
     </div>
 </div>
 

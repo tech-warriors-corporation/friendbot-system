@@ -64,3 +64,10 @@
     color: var(--black);
     flex-grow: 1;
 }
+
+.list .list__search{
+    color: var(--primary);
+    font-size: 1.25rem;
+    display: block;
+    width: 100%;
+}

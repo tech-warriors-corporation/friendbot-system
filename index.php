@@ -4,9 +4,14 @@
     require_once("./utils/connection.php");
     require_once("./utils/date.php");
     require_once("./utils/validations.php");
+    require_once("./utils/redirects.php");
+
+    $first_category = $categories[0]; 
+
+    if(!$current_category) redirect("./index.php?categoria=$first_category", "");
 
     $list = [];
-    $statement = $connection -> prepare("SELECT id, title, date, description, image_url FROM $table ORDER BY date DESC");
+    $statement = $connection -> prepare("SELECT id, title, date, description, image_url FROM $table WHERE category='$current_category' AND (title LIKE '%$current_search%' OR description LIKE '%$current_search%') ORDER BY date DESC");
 
     try{
         $statement -> execute();
@@ -18,6 +23,8 @@
 ?>
 
 <section class="list">
+    <?php echo !$current_search ? "" : "<p class='list__search'>Sua busca: $current_search</p>" ?>
+
     <h2 class="list__subtitle subtitle">Listagem das publicações (10 últimas)</h2>
     
     <div class="list__container">
@@ -37,7 +44,7 @@
                             <div class='list__card-content'>
                                 <h3 class='list__card-title'>$title ($date)</h3>
                                 <p class='list__card-text'>$description</p>
-                                <a href='./detail.php?id=$id' class='link link--red' target='_self'>Ler mais</a>
+                                <a href='./detail.php?id=$id&categoria=$current_category' class='link link--red' target='_self'>Ler mais</a>
                             </div>
                         </div>";
                     }

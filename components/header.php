@@ -2,6 +2,8 @@
     $is_at_admin = str_contains($_SERVER['REQUEST_URI'], 'admin');
     $prefix_folder = $is_at_admin ? '..' : '.';
     $categories = ['Customização física', 'Customização eletrônica', 'Game'];
+    $current_category = $_GET['categoria'];
+    $current_search = $_GET['busca'];
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +46,11 @@
                 <div class="header__categories content">
                     <?php 
                         foreach($categories as $category){
-                            echo "<a class='link' target='_self' href='$prefix_folder/index.php?categoria=$category'>$category</a>";
+                            $active_class = 'link--red';
+
+                            if($category !== $current_category) $active_class = '';
+
+                            echo "<a class='link $active_class' target='_self' href='$prefix_folder/index.php?categoria=$category'>$category</a>";
                         }
                     ?>
                 </div>
@@ -55,6 +61,8 @@
                           class="header__form"
                           name="form_search"
                           method="GET">
+                        <input value="<?php echo $current_category ?>" type="hidden" name="categoria">
+
                         <div class="field">
                             <label class="field__label" for="search">Busca</label>
                             <input class="field__input" placeholder="Busque por título ou descrição" type="text" name="busca" id="search" maxlength="250">
