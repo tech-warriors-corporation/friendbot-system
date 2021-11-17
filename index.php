@@ -11,7 +11,7 @@
     if(!$current_category) redirect("./index.php?categoria=$first_category", "");
 
     $list = [];
-    $statement = $connection -> prepare("SELECT id, title, date, description, image_url FROM $table WHERE category='$current_category' AND (title LIKE '%$current_search%' OR description LIKE '%$current_search%') ORDER BY date DESC");
+    $statement = $connection -> prepare("SELECT id, title, date, description, image_url FROM $table WHERE category='$current_category' AND (title LIKE '%$current_search%' OR description LIKE '%$current_search%') ORDER BY date DESC LIMIT 10");
 
     try{
         $statement -> execute();
