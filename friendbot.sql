@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 15, 2021 at 07:47 PM
+-- Generation Time: Nov 17, 2021 at 01:42 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -37,13 +37,6 @@ CREATE TABLE `posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`id`, `title`, `category`, `date`, `image_url`, `description`) VALUES
-(1, 'friendbot top ', 'Customização eletrônica', '2021-11-16', 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.discogs.com%2FRNxFZT7qTj2FXl5rGFyQcdJeI9s%3D%2Ffit-in%2F575x600%2Ffilters%3Astrip_icc()%3Aformat(jpeg)%3Amode_rgb()%3Aquality(90)%2Fdiscogs-images%2FR-1017812-1345101096-2695.jpeg.jpg&f=1&nofb=1', 'friendbot é um baita projeto!');
-
---
 -- Indexes for dumped tables
 --
 
@@ -61,7 +54,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
