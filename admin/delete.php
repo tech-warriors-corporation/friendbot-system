@@ -4,7 +4,7 @@
     require_once("../utils/connection.php");
     require_once("../utils/redirects.php");
 
-    $id = intval($_REQUEST['id']);
+    $id = intval($_REQUEST['id'] ?? null);
     $statement = $connection -> prepare("DELETE FROM $table WHERE id=$id");
 
     try{

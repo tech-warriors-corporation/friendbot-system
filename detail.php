@@ -6,7 +6,7 @@
     require_once("./utils/date.php");
     require_once("./utils/validations.php");
 
-    $id = intval($_REQUEST['id']);
+    $id = intval($_REQUEST['id'] ?? null);
     $has_id = has_id($id);
     $title = "";
     $date = "";

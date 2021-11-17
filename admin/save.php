@@ -7,12 +7,12 @@
 
     $statement = null;
     $submitted = isset($_POST['submit']);
-    $id = intval($_REQUEST['id']);
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-    $image_url = $_POST['image_url'];
-    $date = $_POST['date'];
-    $category = $_POST['category'];
+    $id = intval($_REQUEST['id'] ?? null);
+    $title = $_POST['title'] ?? null;
+    $description = $_POST['description'] ?? null;
+    $image_url = $_POST['image_url'] ?? null;
+    $date = $_POST['date'] ?? null;
+    $category = $_POST['category'] ?? null;
     $has_id = has_id($id);
     $message = null;
 

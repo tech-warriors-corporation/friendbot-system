@@ -1,9 +1,9 @@
 <?php
-    $is_at_admin = str_contains($_SERVER['REQUEST_URI'], 'admin');
+    $is_at_admin = str_contains($_SERVER['REQUEST_URI'] ?? null, 'admin');
     $prefix_folder = $is_at_admin ? '..' : '.';
     $categories = ['Customização física', 'Customização eletrônica', 'Game'];
-    $current_category = $_GET['categoria'];
-    $current_search = $_GET['busca'];
+    $current_category = $_GET['categoria'] ?? null;
+    $current_search = $_GET['busca'] ?? null;
 
     require_once("$prefix_folder/utils/redirects.php");
 
