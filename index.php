@@ -6,10 +6,6 @@
     require_once("./utils/validations.php");
     require_once("./utils/redirects.php");
 
-    $first_category = $categories[0]; 
-
-    if(!$current_category) redirect("./index.php?categoria=$first_category", "");
-
     $list = [];
     $statement = $connection -> prepare("SELECT id, title, date, description, image_url FROM $table WHERE category='$current_category' AND (title LIKE '%$current_search%' OR description LIKE '%$current_search%') ORDER BY date DESC LIMIT 10");
 
@@ -38,13 +34,14 @@
                         $description = $item['description'];
                         $image_url = $item['image_url'];
                         $id = $item['id'];
+                        $params_index = create_params_index($current_category, $current_search);
 
                         echo "<div class='list__card'>
                             <div class='square-image' aria-label='$title' tabindex='0' style='background-image: url($image_url)'></div>
                             <div class='list__card-content'>
                                 <h3 class='list__card-title'>$title ($date)</h3>
                                 <p class='list__card-text'>$description</p>
-                                <a href='./detail.php?id=$id&categoria=$current_category' class='link link--red' target='_self'>Ler mais</a>
+                                <a href='./detail.php?id=$id&$params_index' class='link link--red' target='_self'>Ler mais</a>
                             </div>
                         </div>";
                     }

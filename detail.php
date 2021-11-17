@@ -12,6 +12,8 @@
     $date = "";
     $description = "";
     $image_url = "";
+    $params_detail = create_params_index($current_category, $current_search);
+    $back_path = "./index.php?$params_detail";
 
     if($has_id){
         $statement = $connection -> prepare("SELECT title, description, image_url, date FROM $table WHERE id=$id");
@@ -26,11 +28,11 @@
             $date = format_string($post -> date);
             $image_url = $post -> image_url;
 
-            if(!$title) redirect('./index.php', "Id inválido");
+            if(!$title) redirect($back_path, "Id inválido");
         } catch(Exception $error){
             show_error($error);
         }
-    } else redirect('./index.php', "Sem id");
+    } else redirect($back_path, "Sem id");
 ?>
 
 <div class="detail">
@@ -38,7 +40,7 @@
     <div class="detail__content">
         <h3 class="subtitle"><?php echo $title ?> (<?php echo $date ?>)</h3>
         <p class="detail__description"><?php echo $description ?></p>
-        <a href="./index.php?categoria=<?php echo $current_category ?>" class="link link--red" target="_self">Voltar</a>
+        <a href="<?php echo $back_path ?>" class="link link--red" target="_self">Voltar</a>
     </div>
 </div>
 

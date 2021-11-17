@@ -4,6 +4,30 @@
     $categories = ['Customização física', 'Customização eletrônica', 'Game'];
     $current_category = $_GET['categoria'];
     $current_search = $_GET['busca'];
+
+    require_once("$prefix_folder/utils/redirects.php");
+
+    function create_params_index($next_category, $next_search){
+        if($next_category && $next_search) return "categoria=$next_category&botao-busca=Buscar&busca=$next_search";
+        else if($next_category) return "categoria=$next_category";
+        else if($next_search) return "botao-busca=Buscar&busca=$next_search";
+        else return "";
+    }
+
+    if(!$is_at_admin){
+        $first_category = $categories[0]; 
+        $is_a_correct_category = false;
+
+        foreach($categories as $category){
+            if($current_category === $category) $is_a_correct_category = true;
+        }
+
+        if(!$current_category || !$is_a_correct_category){
+            $params = create_params_index($first_category, $current_category === "" || $current_category === null ? $current_search : "");
+
+            redirect("./index.php?$params", "");
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -47,10 +71,11 @@
                     <?php 
                         foreach($categories as $category){
                             $active_class = 'link--red';
+                            $params_url = create_params_index($category, "");
 
                             if($category !== $current_category) $active_class = '';
 
-                            echo "<a class='link $active_class' target='_self' href='$prefix_folder/index.php?categoria=$category'>$category</a>";
+                            echo "<a class='link $active_class' target='_self' href='$prefix_folder/index.php?$params_url'>$category</a>";
                         }
                     ?>
                 </div>
