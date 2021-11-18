@@ -48,9 +48,7 @@
                 }
             ?>
         </div>
-        <aside class="list__ad">
-            <img src="./images/fiap.svg" class="list__ad-image" alt="Logo da FIAP">
-        </aside>
+        <aside class="list__ad" aria-label="FIAP" tabindex="0"></aside>
     </div>
 </div>
 
